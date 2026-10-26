@@ -1,0 +1,13 @@
+{
+	"name": "eb-proxy",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Proxy publico do cerebro LLM dos NPCs do RP do Exercito Brasileiro",
+	"main": "proxy.cjs",
+	"scripts": {
+		"start": "node proxy.cjs"
+	},
+	"engines": {
+		"node": ">=18"
+	}
+}

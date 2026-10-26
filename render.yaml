@@ -1,0 +1,18 @@
+# Blueprint do Render: crie o servico a partir deste arquivo.
+# As duas variaveis marcadas com "sync: false" sao secretas e devem
+# ser preenchidas no painel do Render (nao ficam no repositorio).
+services:
+  - type: web
+    name: eb-proxy
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node proxy.cjs
+    healthCheckPath: /health
+    envVars:
+      - key: RIVER_API_KEY
+        sync: false
+      - key: EB_TOKEN
+        sync: false
+      - key: NODE_VERSION
+        value: "20"
